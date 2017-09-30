@@ -15,8 +15,7 @@ import java.io.Serializable;
 //@ApplicationScoped
 public class ExampleBean implements Serializable{
     private  String name;
-    private String firstname;
-    private String name001;
+
 //    @PostConstruct
 //    private void initialize(){
 //        name = "Hello? Den!";
@@ -25,21 +24,12 @@ public class ExampleBean implements Serializable{
     public String getName() {
         return name;
     }
-    @Lock(LockType.WRITE)
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getName001() {
-        return name001;
-    }
-
-    public void setName001(String name001) {
-        this.name001 = name001;
-    }
-
     public void sendAction(){
-       name001 = getName();
        name = "";
     }
 }
